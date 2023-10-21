@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Poppins:wght@200;300;500&family=Rubik:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="mydiv"></div>
+    <script type="text/babel">
+        function Hello() {
+            return <> <Head />
+
+                <Main />
+                <Section />
+                <DevelopSection />
+            </>;
+        }
+
+
+
+        const Head = () => {
+            return (
+                <header className="con">
+                    <div className="logo">
+                        <img src="src/speetrance 1 (1).png" alt="" />
+                    </div>
+                    <nav>
+                        <ul className="flex gap-4	">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Career</a></li>
+                            <li><a href="">Contact Us</a></li>
+
+                        </ul>
+                    </nav>
+                    <div className="searchbar">
+                        <span className="material-symbols-outlined">
+                            search
+                        </span>
+                        <div className="menu-btn">
+                            <img src="src/menu_icon.svg" alt="" />
+                        </div>
+                    </div>
+                </header>)
+        }
+        const Main = () => {
+            return (
+
+                <main>
+                    <section className="top">
+                        <div className="con">
+                            <div className="content-wrapper">
+
+
+                                <div className="content">
+                                    <h1>Mobile App Development and Software Development Company</h1>
+                                    <p>Get access to best in className App and Software Development Services with the digital experts of
+                                        Corewave.
+                                    </p>
+                                </div>
+                                <div className="my-btn">
+
+                                    <button>Let’s Start</button>
+                                </div>
+
+                            </div>
+                            <div className="slider">
+                                <div className="swiper mySwiper">
+                                    <div className="swiper-wrapper">
+                                        <div className="swiper-slide">
+                                            <img src="src/slider1.svg" alt="" />
+                                        </div>
+                                        <div className="swiper-slide">
+                                            <img src="src/slider6.svg" alt="" />
+                                        </div>
+                                        <div className="swiper-slide">
+
+                                            <img src="src/slider2.svg" alt="" />
+                                        </div>
+                                        <div className="swiper-slide">
+                                            <img src="src/slider3.svg" alt="" />
+                                        </div>
+                                        <div className="swiper-slide">
+                                            <img src="src/slider4.svg" alt="" />
+                                        </div>
+                                        <div className="swiper-slide">
+                                            <img src="src/slider5.svg" alt="" />
+                                        </div>
+
+                                    </div>
+                                    <div className="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                </main>
+            )
+        }
+
+        const content = {
+            title: "who we are",
+            subtitle: "We are a new digital product development agency",
+            img: "src/Group 48096047.png",
+            card: [{
+                title: "95",
+                subtitle: "project"
+            },
+            {
+                title: "25",
+                subtitle: "Team"
+            },
+            {
+                title: "4+",
+                subtitle: "Year"
+            },
+            {
+                title: "03",
+                subtitle: "Office"
+            }]
+        }
+
+        const Section = () => {
+            return (
+                <section className="con second">
+                    <div className="content-wrapper">
+                        <h3>{content.title}</h3>
+                        <h2>{content.subtitle}</h2>
+                        <img src={content.img} width="70" alt="" />
+
+                    </div>
+                    <div className="cards">
+                        {content.card.map(element => {
+                            return (
+
+                                <div className="card">
+
+                                    <h3>{element.title}</h3>
+                                    <p>{element.subtitle}</p>
+
+
+                                </div>
+
+                            )
+                        })}
+
+                    </div>
+
+                </section>
+            )
+        }
+        const DevelopContent = {
+            title: "who we are",
+            subtitle: "We are a new digital product development agency",
+            img: "src/Logo.png",
+            card: [{
+                title: "95",
+                subtitle: "lorem ipsum"
+
+            },
+            {
+                title: "25",
+                subtitle: "lorem ipsum"
+            },
+            {
+                title: "4+",
+                subtitle: "lorem ipsum"
+            },
+            {
+                title: "03",
+                subtitle: "lorem ipsum"
+            }]
+        }
+        const DevelopSection = () => {
+            return (
+
+                <section className=" develop second">
+                    <div className="con">
+                        <div className="content-wrapper">
+                            <h3>who we are</h3>
+                            <h2>Best Mobile Application Development in USA, Canada, &amp; India</h2>
+                            <button>About us</button>
+
+                        </div>
+                        <div className="Dcards">
+
+
+                            {DevelopContent.card.map(
+                                card => {
+                                return (
+
+                                    <div className="card">
+                                        <div className="logo">
+                                            <p>{card.subtitle}</p>
+                                            <img src={DevelopContent.img} alt="" />
+                                        </div>
+                                    </div>
+                                )
+                            })
+
+                            }
+
+
+                        </div>
+                    </div>
+
+                </section>
+            )
+        }
+        const container = document.getElementById("mydiv");
+        const root = ReactDOM.createRoot(container);
+        root.render(<Hello />);
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js">
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            grabCursor: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+
+
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
+
+</body>
+
+</html>
